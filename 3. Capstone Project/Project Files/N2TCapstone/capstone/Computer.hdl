@@ -1,0 +1,13 @@
+/**
+ * The Hack computer, consisting of CPU, ROM32K, and Memory.
+ * Uses custom CPU and Memory chips alongside built-in ROM32K.
+ */
+CHIP Computer {
+    IN reset;
+
+    PARTS:
+    ROM32K(address=pc, out=instruction);
+    CPU(inM=memOut, instruction=instruction, reset=reset,
+        outM=outM, writeM=writeM, addressM=addressM, pc=pc);
+    Memory(in=outM, load=writeM, address=addressM, out=memOut);
+}
