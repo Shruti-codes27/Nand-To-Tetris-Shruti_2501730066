@@ -1,0 +1,14 @@
+# Labels (ROM addresses)
+LOOP: 0
+SET_BLACK: 8
+START_DRAW: 10
+ROW_LOOP: 18
+COL_LOOP: 30
+NEXT_ROW: 45
+
+# Variables (RAM addresses)
+color: 16
+addr: 17
+rows: 18
+cols: 19
+curr: 20
